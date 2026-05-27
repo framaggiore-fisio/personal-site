@@ -185,3 +185,49 @@ footer {
     margin: 50px auto;
     max-width: 60%;
 }
+
+/* ==========================================
+   PER SMARTPHONE (Schermi fino a 768px)
+   ========================================== */
+@media (max-width: 768px) {
+    
+    /* Riporta l'header in verticale */
+    .header-content {
+        flex-direction: column;   /* Mette la foto SOPRA e il testo SOTTO */
+        text-align: center;       /* Centra tutti i testi */
+        justify-content: center;
+        padding-left: 20px;       /* Riduce lo spazio ai lati */
+        padding-right: 20px;
+        gap: 20px;                /* Riduce la distanza tra foto e testo */
+    }
+
+    /* Rimpicciolisce leggermente la foto per non occupare tutto lo schermo */
+    .profile-img {
+        width: 140px;
+        height: 140px;
+    }
+
+    /* Centra il blocco di testo */
+    .header-text-block {
+        text-align: center;
+    }
+
+    /* Rimpicciolisce i testi dell'header per farli stare su schermi piccoli */
+    .main-header h1 {
+        font-size: 1.8rem; /* Prima era 2.5rem */
+    }
+
+    .subtitle {
+        font-size: 1rem;
+        margin-bottom: 15px;
+    }
+
+    /* Regola gli spazi della sezione Chi Sono e Servizi */
+    .container {
+        padding: 40px 15px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr; /* Mette i servizi uno sotto l'altro in un'unica colonna */
+    }
+}
