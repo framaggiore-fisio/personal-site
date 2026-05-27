@@ -230,4 +230,85 @@ footer {
     .services-grid {
         grid-template-columns: 1fr; /* Mette i servizi uno sotto l'altro in un'unica colonna */
     }
+
+    /* Regole galleria per lo Smartphone */
+    .gallery-grid {
+        /* Sul telefono mostra 2 foto affiancate invece di 3 */
+        grid-template-columns: repeat(2, 1fr) !important; 
+        gap: 15px !important; /* Spazio leggermente ridotto per il telefono */
+    }
+
+    .gallery-item {
+        height: 150px !important; /* Foto un po' più basse sul telefono per non occupare troppo spazio */
+    }
+}
+
+/* SEZIONE FOTO STUDIO */
+.gallery-section {
+    margin-bottom: 40px;
+}
+
+.gallery-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.gallery-section .section-intro {
+    text-align: center;
+    color: #7f8c8d;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+}
+
+.gallery-grid {
+    display: grid;
+    /* Crea una griglia con foto che si adattano allo schermo */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.gallery-item {
+    position: relative; /* Necessario per posizionare la didascalia sopra la foto */
+    overflow: hidden; /* Nasconde ciò che esce se la foto non è perfettamente quadrata */
+    border-radius: 8px; /* Angoli arrotondati come le service card */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    /* FORZA L'ALTEZZA DELLE FOTO: modificando questo numero 
+       le foto diventeranno più grandi o più piccole in altezza */
+    height: 220px;
+}
+
+.gallery-item:hover {
+    transform: scale(1.03); /* Ingigantisce leggermente la foto al passaggio del mouse */
+    box-shadow: 0 6px 10px rgba(0,0,0,0.2);
+}
+
+.gallery-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ritaglia e adatta l'immagine senza distorcerla */
+    transition: transform 0.3s ease;
+}
+
+/* Stile per la didascalia (opzionale) */
+.gallery-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Sfondo scuro semitrasparente per leggere il testo */
+    color: white;
+    padding: 10px;
+    font-size: 0.9rem;
+    text-align: center;
+    opacity: 0; /* Nasconde la didascalia di default */
+    transition: opacity 0.3s ease;
+}
+
+/* Mostra la didascalia quando si passa sopra con il mouse */
+.gallery-item:hover .gallery-caption {
+    opacity: 1;
 }
