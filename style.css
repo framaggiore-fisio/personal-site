@@ -342,3 +342,29 @@ footer {
 .whatsapp-icon {
     font-size: 1.2rem;
 }
+/* SEZIONE PERCORSO FORMATIVO (UGUALE A CHI SONO) */
+.education-section {
+    margin-bottom: 40px;
+}
+
+/* Il titolo eredita lo stesso stile degli altri h2 del sito */
+.education-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 25px;
+}
+
+/* Il contenitore ha la stessa larghezza di quello di "Chi Sono" per essere simmetrico */
+.education-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Il testo ha lo stesso carattere, dimensione e giustificazione */
+.education-content p {
+    color: #555;
+    font-size: 1.05rem;
+    margin-bottom: 20px;
+    text-align: justify; /* Allineato elegantemente a destra e sinistra */
+}
