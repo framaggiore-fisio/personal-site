@@ -312,3 +312,33 @@ footer {
 .gallery-item:hover .gallery-caption {
     opacity: 1;
 }
+/* PULSANTE FLUTTUANTE WHATSAPP */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 30px;       /* Distanza dal fondo dello schermo */
+    right: 30px;        /* Distanza dal bordo destro dello schermo */
+    background-color: #25d366; /* Il verde ufficiale di WhatsApp */
+    color: white !important;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 50px; /* Lo rende completamente arrotondato/a pillola */
+    font-weight: bold;
+    font-size: 0.95rem;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 9999;       /* Forza il tasto a stare sopra a qualsiasi altro elemento del sito */
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+/* Effetto al passaggio del mouse (PC) */
+.whatsapp-btn:hover {
+    transform: scale(1.05); /* Si ingrandisce leggermente */
+    background-color: #20ba5a; /* Diventa un verde un pizzico più scuro */
+}
+
+/* Icona dentro il pulsante */
+.whatsapp-icon {
+    font-size: 1.2rem;
+}
