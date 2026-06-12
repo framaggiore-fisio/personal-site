@@ -74,10 +74,40 @@ body {
     letter-spacing: 1px;
 }
 
+/* NUOVO LAYOUT PER INFO E WIDGET */
+.header-info {
+    display: flex;
+    justify-content: space-between; /* Spinge i contatti a sinistra e il widget a destra */
+    align-items: center;            /* Li allinea perfettamente in verticale */
+    width: 100%;
+    margin-top: 15px;
+    gap: 20px;
+}
+
 .header-info p {
     margin: 5px 0;
     font-size: 1rem;
     opacity: 0.9;
+}
+
+.widget-booking {
+    flex-shrink: 0; /* Impedisce al pulsante di rimpicciolirsi */
+}
+
+/* Stile personalizzato per il link/pulsante MioDottore (opzionale, per integrarlo meglio) */
+.zl-url {
+    background-color: #3498db; /* Un azzurro coordinato con le tue card */
+    color: white !important;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.2s;
+    display: inline-block;
+}
+
+.zl-url:hover {
+    background-color: #2980b9;
 }
 
 /* GRIGLIA SERVIZI */
@@ -240,6 +270,14 @@ footer {
 
     .gallery-item {
         height: 150px !important; /* Foto un po' più basse sul telefono per non occupare troppo spazio */
+    }
+
+    /* Forza i contatti e il widget ad andare uno sotto l'altro sui telefoni */
+    .header-info {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 15px;
     }
 }
 
